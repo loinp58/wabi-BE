@@ -23,7 +23,7 @@ class StoresController extends Controller
             if ($request->has('type')) {
                 $type = config('system.stores.type')[$request->type];
             }
-            dd($type);
+
             $stores = Store::getAllStore($type, $filter, $keyword);
         }
         catch (\Exception $e) {
